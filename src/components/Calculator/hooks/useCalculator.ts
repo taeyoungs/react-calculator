@@ -39,14 +39,14 @@ type Action =
       type: typeof ACTION_TYPE.CLEAR;
     };
 
-const initialState: ICalculator = {
+export const initialState: ICalculator = {
   leftOperand: 0,
   rightOperand: null,
   operation: null,
   accumulator: '0',
 };
 
-function reducer(state: ICalculator, action: Action) {
+export function reducer(state: ICalculator, action: Action) {
   switch (action.type) {
     case ACTION_TYPE.OPERAND:
       return {
